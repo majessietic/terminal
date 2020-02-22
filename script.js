@@ -28,6 +28,10 @@ const app = () => {
 const execute = function executeCommand(input) {
   let output;
   input = input.toLowerCase();
+  if (input === 'cls' || input === 'clear') {
+    return terminalOutput.innerHTML = "";
+  }
+
   if (input.length === 0) {
     return;
   }
